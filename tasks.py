@@ -7,6 +7,9 @@
 # ///
 
 # pylint: skip-file
+"""
+Automation tasks, run this script with uv run tasks.py
+"""
 
 import re
 from shutil import which

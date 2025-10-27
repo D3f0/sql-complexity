@@ -1,7 +1,7 @@
 [project]
 name = "sql-complexity"
-version = "0.1.4"
-description = "Add your description here"
+version = "0.1.5"
+description = "A SQL complexity library and CLI"
 readme = "README.md"
 authors = [
     { name = "Nahuel Defossé", email = "nahuel.deofsse@ibm.com" }
