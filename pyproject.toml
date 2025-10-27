@@ -1,0 +1,26 @@
+[project]
+name = "sql-complexity"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Nahuel Defossé", email = "nahuel.deofsse@ibm.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.3.0",
+    "rich>=14.2.0",
+    "sqlglot>=27.28.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.5,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pdbpp>=0.11.7",
+    "pytest>=8.4.2",
+]
+[project.scripts]
+"sql-complexity" = "sql_complexity.cli:main"
