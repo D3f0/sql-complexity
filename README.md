@@ -15,3 +15,8 @@ The rules are the following:
 - +1 per UNION or INTERSECT
 - +1 per function call
 - +1 per CASE expression
+
+This package is inspired on the comments of this [stack overflow](https://stackoverflow.com/questions/3353634/measuring-the-complexity-of-sql-statements) thread.
+
+
+## Install

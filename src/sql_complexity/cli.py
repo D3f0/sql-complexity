@@ -1,3 +1,7 @@
+"""
+Command line interface
+"""
+
 import sys
 
 import click
@@ -11,17 +15,17 @@ err = Console(stderr=True)
 
 
 @click.command()
-@click.argument("input", type=click.File("r"), required=False, default="-")
+@click.argument("user_input", type=click.File("r"), required=False, default="-")
 @click.option("-v", "--verbose", is_flag=True, help="Enable verbose mode")
-def main(input, verbose: bool):
+def main(user_input, verbose: bool):
     """SQL Complexity assessment"""
     if sys.stdin.isatty():
         err.print("[bold green]Running in interactive mode[/bold green]")
-    contents = input.read().strip()
+    contents = user_input.read().strip()
     if verbose:
         err.print(Syntax(contents, lexer="sql"))
     checker = SQLComplexityAssessment()
     score = checker.assess(contents)
     if verbose:
         out.print(score)
-    print(score.total)
+    out.print(score.total)
