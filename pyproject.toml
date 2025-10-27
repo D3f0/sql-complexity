@@ -1,12 +1,13 @@
 [project]
 name = "sql-complexity"
-version = "0.1.5"
+version = "0.1.6"
 description = "A SQL complexity library and CLI"
 readme = "README.md"
 authors = [
     { name = "Nahuel Defossé", email = "nahuel.deofsse@ibm.com" }
 ]
 requires-python = ">=3.10"
+license = { file = "LICENSE.txt" }
 dependencies = [
     "click>=8.3.0",
     "rich>=14.2.0",
