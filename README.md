@@ -20,3 +20,42 @@ This package is inspired on the comments of this [stack overflow](https://stacko
 
 
 ## Install
+
+```bash
+python -m pip install sql-complexity
+```
+
+```bash
+poetry add sql-complexity
+```
+
+```bash
+uv add sql-complexity
+```
+
+### Run with uvx
+
+```bash
+uvx --refresh sql-complexity
+```
+
+## Run from the CLI
+
+```bash
+sql-complexity some.sql
+```
+
+```bash
+cat myfile.sql | sql-complexity
+```
+
+## Using it in your code
+
+```python
+from sql_complexity import SQLComplexityAssessment
+
+assessor = SQLComplexityAssessment()
+score = assessor.assess(contents)
+print(score)
+print(score.total)
+```
